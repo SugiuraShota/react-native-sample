@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, Alert, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, Dimensions } from 'react-native';
 import { Button } from 'react-native-elements';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -16,14 +16,7 @@ const SLIDE_DATA = [
 
 class WelcomeScreen extends React.Component {
   onStartButtonPress = () => {
-    Alert.alert(
-      'Alert',
-      'The button was presssed',
-      [
-        { text: 'ok' }
-      ],
-      { cancelable: false }
-    );
+    this.props.navigation.navigate('main');
   }
 
   renderLastButton(index) {
